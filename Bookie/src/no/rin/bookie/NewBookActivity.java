@@ -20,7 +20,7 @@ public class NewBookActivity extends Activity  implements OnClickListener {
 
 	private EditText title;
 	private Button save;
-	public static final String NEW_BOOK_CREATED = "no.rin.bookie.action.NEW_BOOK";
+	public static final String NEW_BOOK = "no.rin.bookie.NEW_BOOK";
 	
 
 
@@ -47,7 +47,7 @@ public class NewBookActivity extends Activity  implements OnClickListener {
 	public void onClick(View v) {
 		Resources res = getResources();
 		String FILENAME = res.getString(R.string.filename);
-		String string = title.getText().toString() + "\n";
+		String string = title.getText().toString();
 
 		FileOutputStream fos;
 		try {
@@ -61,7 +61,7 @@ public class NewBookActivity extends Activity  implements OnClickListener {
 			e.printStackTrace();
 		}
         
-    	Intent intent = new Intent(NEW_BOOK_CREATED);
+    	Intent intent = new Intent(NEW_BOOK);
     	intent.putExtra("book", string);
     	sendBroadcast(intent);
     	

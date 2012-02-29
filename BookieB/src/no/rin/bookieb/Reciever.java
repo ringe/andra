@@ -7,14 +7,17 @@ import android.widget.Toast;
 
 public class Reciever extends BroadcastReceiver {
 	
+	
+	CharSequence toastText = "You added this book: ";
+	int duration = Toast.LENGTH_LONG;
 	private Toast toast;
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		
 		String book = intent.getStringExtra("book");
-		int duration = Toast.LENGTH_SHORT;
-		toast = Toast.makeText(context, book, duration);
+		
+		toast = Toast.makeText(context, toastText + book, duration);
 		toast.show();
 	}
 

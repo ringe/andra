@@ -18,12 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
-    
-    <receiver android:name="Reciever">
-        <intent-filter> 
-        	<action android:name="no.rin.bookie.action.NEW_BOOK" />    
+        
+    <receiver android:name=".Reciever">
+    	<intent-filter> 
+        	<action android:name="no.rin.bookie.NEW_BOOK" />    
         </intent-filter>
     </receiver>
-
+    
+    </application>  
 </manifest>

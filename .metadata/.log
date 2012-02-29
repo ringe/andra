@@ -1960,3 +1960,34 @@ Binding(CTRL+DEL,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2012-02-29 15:12:32.548 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=nb_NO
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data /home/runar/Projects/andra -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-02-29 15:12:35.018
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.team.core 4 0 2012-02-29 15:12:35.513
+!MESSAGE Could not instantiate provider com.aptana.git.core.GitRepositoryProvider for project Convyrt.
+!STACK 1
+org.eclipse.team.core.TeamException: Could not instantiate provider com.aptana.git.core.GitRepositoryProvider for project Convyrt.
+	at org.eclipse.team.core.RepositoryProvider.mapNewProvider(RepositoryProvider.java:165)
+	at org.eclipse.team.core.RepositoryProvider.mapExistingProvider(RepositoryProvider.java:235)
+	at org.eclipse.team.core.RepositoryProvider.getProvider(RepositoryProvider.java:507)
+	at org.eclipse.team.internal.core.TeamHookDispatcher.getProvider(TeamHookDispatcher.java:97)
+	at org.eclipse.team.internal.core.TeamHookDispatcher.getRuleFactory(TeamHookDispatcher.java:105)
+	at org.eclipse.core.internal.resources.Rules.factoryFor(Rules.java:93)
+	at org.eclipse.core.internal.resources.Rules.refreshRule(Rules.java:166)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1653)
+	at org.eclipse.core.internal.refresh.RefreshJob.runInWorkspace(RefreshJob.java:167)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.team.core 4 0 2012-02-29 15:12:35.514
+!MESSAGE Could not instantiate provider com.aptana.git.core.GitRepositoryProvider for project Convyrt.
+
+!ENTRY com.android.ide.eclipse.ddms 4 0 2012-02-29 15:12:37.304
+!MESSAGE DDMS files not found: /home/runar/dev/android-sdks/platform-tools/adb /home/runar/dev/android-sdks/tools/hprof-conv /home/runar/dev/android-sdks/tools/traceview 
