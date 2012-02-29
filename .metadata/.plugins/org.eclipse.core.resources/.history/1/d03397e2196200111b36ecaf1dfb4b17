@@ -1,0 +1,75 @@
+package no.rin.bookie;
+
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.content.res.Resources;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+
+public class DeleteBookActivity extends Activity implements OnClickListener {
+	
+	private ListView booklist;
+	private Button deletebook;
+
+	@Override
+    public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
+
+        booklist = (ListView) findViewById(R.id.booklist);
+        
+        
+        deletebook = (Button) findViewById(R.id.deletebook);
+        deletebook.setOnClickListener(this);
+        
+        
+	}
+	
+	 @Override
+	    public void onResume() {
+	    	super.onResume();
+	    	Resources res = getResources();
+			String FILENAME = res.getString(R.string.filename);
+			
+			try {
+				FileInputStream fis = openFileInput(FILENAME);
+				DataInputStream in = new DataInputStream(fis);
+				BufferedReader br = new BufferedReader(new InputStreamReader(in));
+				
+				String strLine;
+				ArrayList<String> out = new ArrayList<String>();
+				//Read File Line By Line
+				while ((strLine = br.readLine()) != null)   {
+					out.add(strLine);
+				}
+				
+		 		booklist.setAdapter(new ArrayAdapter<String>(this, R.layout.book, out));
+				  
+				//Close the input stream
+				in.close();
+				fis.close();		
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+	    }
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

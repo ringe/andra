@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Convyrt</string>
+    <string name="measures_prompt">Convyrt kada?</string>
+    <string name="units_prompt">Convyrt fra:</string>
+    <string name="zero">0</string>
+    
+    <string-array name="measures_array">
+        <item>Avstand</item>
+        <item>Mengde</item>
+        <item>Volum</item>
+        <item>Areal</item>
+        <item>Temperatur</item>
+        <item>Tid</item>
+    </string-array>
+    
+    <string-array name="distance_array">
+        <item>meter (m)</item>
+        <item>kilometer (km)</item>
+        <item>tommer (in)</item>
+    </string-array>
+    
+    <string-array name="mass_array">
+        <item>gram (g)</item>
+        <item>kilogram (kg)</item>
+        <item>pund (lb)</item>
+    </string-array>
+    
+    <string-array name="volume_array">
+        <item>liter (l)</item>
+        <item>milliliter (ml)</item>
+        <item>US gallon (gal)</item>
+    </string-array>
+    
+    <string-array name="area_array">
+        <item>kvadratmeter (m²)</item>
+        <item>kvadratkilometer (km²)</item>
+        <item>kvadratfot (in²)</item>
+    </string-array>
+    
+    <string-array name="temperature_array">
+        <item>Celcius (°C)</item>
+        <item>Fahrenheit (°F)</item>
+        <item>Kelvin (K)</item>
+    </string-array>
+    
+    <string-array name="time_array">
+        <item>time (h)</item>
+        <item>minutt (m)</item>
+        <item>sekund (s)</item>
+    </string-array>
+
+</resources>

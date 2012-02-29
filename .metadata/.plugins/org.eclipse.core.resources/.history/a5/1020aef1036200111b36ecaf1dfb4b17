@@ -1,0 +1,11 @@
+package no.rin.bookie;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class NewBookActivity extends Activity {
+	@Override
+    public void onCreate(Bundle savedInstanceState) {
+		
+	}
+}

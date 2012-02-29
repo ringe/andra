@@ -1,0 +1,22 @@
+package no.rin.bookie;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class NewBookActivity extends Activity {
+	@Override
+    public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+        setContentView(R.layout.newbook);
+
+        Button next = (Button) findViewById(R.id.Button02);
+        next.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                setResult(RESULT_OK, intent);
+                finish();
+            }
+
+        });
+	}
+}

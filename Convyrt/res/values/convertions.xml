@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="m_to">
+        <item >km</item>
+        <item >in</item>
+    </string-array>
+    <string-array name="m_by">
+        <item >/1000</item>
+        <item >*39.3700787</item>
+    </string-array>
+    
+</resources>
